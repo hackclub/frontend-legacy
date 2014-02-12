@@ -1,7 +1,11 @@
 'use strict';
 
+beforeEach(function() {
+  browser.driver.manage().window().setSize(800, 600);
+});
+
 var Homepage = function() {
-  this.navbarName = element(by.className('name'));
+  this.navbarName = element(by.className('title'));
 
   this.get = function() {
     browser.get('/');
@@ -21,8 +25,4 @@ describe('homepage', function() {
 
     expect(homepage.navbarName.getText()).toEqual('hackEDU');
   });
-});
-
-describe('register', function() {
-  it('should contain login')
 });
