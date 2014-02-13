@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('hackedu')
+angular.module('hackeduApp')
   .controller('MainCtrl', function ($scope) {
     $scope.map = {
       center: {

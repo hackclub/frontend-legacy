@@ -3,7 +3,7 @@
 describe('Controller: ApplyCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('hackedu'));
+  beforeEach(module('hackeduApp'));
 
   var ApplyCtrl,
     scope;

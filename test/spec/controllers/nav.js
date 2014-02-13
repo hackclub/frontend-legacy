@@ -1,7 +1,7 @@
 'use strict';
 
 describe('Controller: NavCtrl', function () {
-  beforeEach(module('hackedu'));
+  beforeEach(module('hackeduApp'));
 
   var ctrl, scope, rootScope, location;
 

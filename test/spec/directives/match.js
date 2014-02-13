@@ -2,7 +2,7 @@
 
 describe('Directive: match', function () {
 
-  beforeEach(module('hackedu'));
+  beforeEach(module('hackeduApp'));
 
   var element, scope;
 

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('hackedu')
+angular.module('hackeduApp')
   .directive('match', function($parse) {
     return {
       require: 'ngModel',

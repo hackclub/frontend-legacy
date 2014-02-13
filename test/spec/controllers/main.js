@@ -1,7 +1,7 @@
 'use strict';
 
 describe('Controller: MainCtrl', function () {
-  beforeEach(module('hackedu'));
+  beforeEach(module('hackeduApp'));
 
   var ctrl, scope;
 

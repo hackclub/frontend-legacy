@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('hackedu')
+angular.module('hackeduApp')
   .controller('ApplyCtrl', function($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
