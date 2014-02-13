@@ -31,11 +31,6 @@ angular.module('hackedu')
     $scope.isActive = function (viewLocation) {
       return viewLocation === $location.path();
     };
-  })
-  .controller('ApplyCtrl', function ($scope, $location) {
-    $scope.isActive = function (viewLocation) {
-      return viewLocation === $location.path();
-    };
   });
 
 angular.module('hackedu')
