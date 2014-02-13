@@ -1,7 +1,7 @@
 # hackEDU [![Build Status](https://drone.io/github.com/hackedu/frontend/status.png)](https://drone.io/github.com/hackedu/frontend/latest) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
-Welcome to hackEDU's website frontend. This is served as a static site and
-communicates with our [backend](https://github.com/hackedu/backend) for
+Welcome to hackEDU's website frontend. I'm served as a static site and
+communicate with our [backend](https://github.com/hackedu/backend) for
 anything dynamic.
 
 ## Getting Started
