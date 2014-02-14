@@ -159,6 +159,25 @@ module.exports = function (grunt) {
       }
     },
 
+    // Process @ifdefs and friends.
+    preprocess : {
+      options: {
+        inline: true,
+        context : {
+          DEBUG: false
+        }
+      },
+      html : {
+        src : [
+          '<%= yeoman.dist %>/index.html', 
+          '<%= yeoman.dist %>/views/*.html'
+        ]
+      },
+      js : {
+        src: '.tmp/concat/scripts/*.js'
+      }
+    },
+
     // Compiles Sass to CSS and generates necessary files if requested
     compass: {
       options: {
@@ -403,6 +422,8 @@ module.exports = function (grunt) {
     'concurrent:dist',
     'autoprefixer',
     'concat',
+    'preprocess:html',
+    'preprocess:js',
     'ngmin',
     'copy:dist',
     'cdnify',
@@ -418,4 +439,6 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  grunt.loadNpmTasks('grunt-preprocess');
 };
