@@ -1,5 +1,11 @@
 'use strict';
 
+var apiBase = "https://hackedu-website.appspot.com/v1";
+
+// @if DEBUG
+apiBase = "localhost:4000/v1";
+// @endif
+
 angular.module('hackeduApp', [
   'ngCookies',
   'ngResource',
