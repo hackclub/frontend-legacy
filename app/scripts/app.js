@@ -3,7 +3,7 @@
 var apiBase = 'https://hackedu-website.appspot.com/v1';
 
 // @if DEBUG
-apiBase = 'localhost:4000/v1';
+apiBase = 'http://localhost:8080/v1';
 // @endif
 
 angular.module('hackeduApp', [
