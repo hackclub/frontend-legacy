@@ -15,4 +15,11 @@ describe('Controller: ApplyCtrl', function () {
       $scope: scope
     });
   }));
+
+  it('should attach an empty user object to the scope', function () {
+    expect(scope.user).toEqual({});
+  });
+
+  it('should successfully post valid form', function () {});
+  it('should unsuccessfully post invalid form', function () {});
 });
