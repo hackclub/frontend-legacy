@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('hackeduApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope, School) {
     $scope.map = {
       center: {
         latitude: 36,
@@ -10,20 +10,5 @@ angular.module('hackeduApp')
       zoom: 4
     };
     
-    $scope.schools = [
-      {
-        'name': 'Austin High School',
-        'location': {
-          'latitude': '30.27382',
-          'longitude': '-97.76745'
-        }
-      },
-      {
-        'name': 'Thunderridge High School',
-        'location': {
-          'latitude': '39.5347968',
-          'longitude': '-105.01200670000003'
-        }
-      }
-    ];
+    $scope.schools = School.query();
   });

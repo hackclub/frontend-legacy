@@ -17,7 +17,7 @@ describe('Controller: MainCtrl', function () {
   });
 
   it('should attach schools to the scope', function () {
-    expect(scope.schools.length).toBe(2);
+    expect(scope.schools).toNotBe(null);
   });
 });
 

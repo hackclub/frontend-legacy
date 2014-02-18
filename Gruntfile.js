@@ -169,7 +169,7 @@ module.exports = function (grunt) {
       },
       html : {
         src : [
-          '<%= yeoman.dist %>/index.html', 
+          '<%= yeoman.dist %>/index.html',
           '<%= yeoman.dist %>/views/*.html'
         ]
       },
