@@ -8,23 +8,23 @@
       <legend>Account Information</legend>
       <div class="row">
         <div class="small-6 columns"
-          ng-class="{error: apply.firstname.$dirty && apply.firstname.$invalid}">
+          ng-class="{error: apply.first_name.$dirty && apply.first_name.$invalid}">
           <label>First Name <small>Required</small></label>
-          <input type="text" name="firstname" ng-model="user.firstname"
+          <input type="text" name="first_name" ng-model="user.first_name"
           -             required placeholder="Zaphod" />
-          <div ng-show="apply.firstname.$dirty && apply.firstname.$invalid">
-            <small class="error" ng-show="apply.firstname.$error.required">
+          <div ng-show="apply.first_name.$dirty && apply.first_name.$invalid">
+            <small class="error" ng-show="apply.first_name.$error.required">
               You must provide a first name.
             </small>
           </div>
         </div>
         <div class="small-6 columns"
-          ng-class="{error: apply.lastname.$dirty && apply.lastname.$invalid}">
+          ng-class="{error: apply.last_name.$dirty && apply.last_name.$invalid}">
           <label>Last Name <small>Required</small></label>
-          <input type="text" name="lastname" ng-model="user.lastname"
+          <input type="text" name="last_name" ng-model="user.last_name"
             required placeholder="Beeblebrox" />
-          <div ng-show="apply.lastname.$dirty && apply.lastname.$invalid">
-            <small class="error" ng-show="apply.lastname.$error.required">
+          <div ng-show="apply.last_name.$dirty && apply.last_name.$invalid">
+            <small class="error" ng-show="apply.last_name.$error.required">
               You must provide a last name.
             </small>
           </div>
