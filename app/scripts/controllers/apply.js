@@ -9,13 +9,13 @@ angular.module('hackeduApp')
     $scope.registrationForm = {
       user: $scope.user,
       application: $scope.application
-    }
+    };
 
     $scope.createUser = function () {
       $http({
         method: 'POST',
         url: apiBase + '/apply',
-        data: registrationForm
+        data: $scope.registrationForm
       });
     };
   });
