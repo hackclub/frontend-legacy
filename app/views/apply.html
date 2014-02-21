@@ -108,7 +108,7 @@
           ng-class="{error: apply.high_school.$dirty && apply.high_school.$invalid}">
           <label>High School <small>Required</small></label>
           <input type="text" name="high_school"
-          ng-model="user.application.high_school" required />
+          ng-model="application.high_school" required />
           <div ng-show="apply.high_school.$dirty && apply.high_school.$invalid">
             <small class="error" ng-show="apply.high_school.$error.required">
               You must provide your high school.
@@ -124,7 +124,7 @@
             of class, that you created or worked on. <small>Required</small>
           </label>
           <textarea name="interesting_project"
-            ng-model="user.application.interesting_project" required></textarea>
+            ng-model="application.interesting_project" required></textarea>
           <div ng-show="apply.interesting_project.$dirty && apply.interesting_project.$invalid">
             <small class="error" ng-show="apply.interesting_project.$error.required">
               You must provide an interesting project.
@@ -140,7 +140,7 @@
             (non-computer) system to your advantage. <small>Required</small>
           </label>
           <textarea name="system_hacked"
-            ng-model="user.application.system_hacked" required></textarea>
+            ng-model="application.system_hacked" required></textarea>
           <div ng-show="apply.system_hacked.$dirty && apply.system_hacked.$invalid">
             <small class="error" ng-show="apply.system_hacked.$error.required">
               You must provide a system that you hacked.
@@ -155,7 +155,7 @@
             What are you passionate about? <small>Required</small>
           </label>
           <textarea name="passion"
-            ng-model="user.application.passion" required></textarea>
+            ng-model="application.passion" required></textarea>
           <div ng-show="apply.passion.$dirty && apply.passion.$invalid">
             <small class="error" ng-show="apply.passion.$error.required">
               You must discuss what you are passionate about.
@@ -169,7 +169,7 @@
           <label>
             What is your story? How did you get started with programming? <small>Required</small>
           </label>
-          <textarea name="story" ng-model="user.application.story"
+          <textarea name="story" ng-model="application.story"
             required></textarea>
           <div ng-show="apply.story.$dirty && apply.story.$invalid">
             <small class="error" ng-show="apply.story.$error.required">
@@ -184,7 +184,7 @@
           <label>
             Why do you want to start a Hack Club? <small>Required</small>
           </label>
-          <textarea name="why" ng-model="user.application.why"
+          <textarea name="why" ng-model="application.why"
             required></textarea>
           <div ng-show="apply.why.$dirty && apply.why.$invalid">
             <small class="error" ng-show="apply.why.$error.required">
@@ -196,6 +196,9 @@
     </fieldset>
     <div class="panel">
       <pre>user = {{ user | json }}</pre>
+    </div>
+    <div class="panel">
+      <pre>application = {{ application | json }}</pre>
     </div>
 
     <button type="submit" ng-disabled="apply.$invalid">Submit</button>
