@@ -382,6 +382,18 @@ module.exports = function (grunt) {
         configFile: 'protractor.conf.js'
       },
       run: {}
+    },
+
+    buildcontrol: {
+      options: {
+        push: true
+      },
+      dokku: {
+        options: {
+          remote: 'dokku@zach.xxx:hackedu-frontend',
+          branch: 'master'
+        }
+      }
     }
   });
 
@@ -441,4 +453,5 @@ module.exports = function (grunt) {
   ]);
 
   grunt.loadNpmTasks('grunt-preprocess');
+  grunt.loadNpmTasks('grunt-build-control');
 };
