@@ -25,9 +25,18 @@ describe('Controller: ApplyCtrl', function () {
   });
 
   it('should attach a registrationForm object to the scope', function () {
-    expect(scope.application).toEqual({
-      user: scope.user,
-      application: scope.application
+    scope.user.firstName = 'John';
+    scope.application.reason = 'Foo';
+
+    scope.$apply();
+
+    expect(scope.registrationForm).toEqual({
+      user: {
+        firstName: 'John'
+      },
+      application: {
+        reason: 'Foo'
+      }
     });
   });
 
