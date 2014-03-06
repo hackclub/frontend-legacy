@@ -11,9 +11,10 @@ angular.module('hackeduApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'google-maps'
+  'google-maps',
+  'angularytics'
 ])
-  .config(function ($routeProvider, $locationProvider) {
+  .config(function ($routeProvider, $locationProvider, AngularyticsProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -30,4 +31,9 @@ angular.module('hackeduApp', [
     if (window.history && window.history.pushState) {
       $locationProvider.html5Mode(true);
     }
+
+    AngularyticsProvider.setEventHandlers(['GoogleUniversal']);
+  })
+  .run(function (Angularytics) {
+    Angularytics.init();
   });
