@@ -20,8 +20,6 @@ module.exports = function(config) {
       'app/bower_components/angular-route/angular-route.js',
       'app/bower_components/underscore/underscore.js',
       'app/bower_components/angular-google-maps/dist/angular-google-maps.js',
-      'app/scripts/misc/google_analytics.js',
-      'app/bower_components/angularytics/dist/angularytics.min.js',
       'app/scripts/*.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
