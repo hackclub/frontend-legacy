@@ -391,6 +391,7 @@ module.exports = function (grunt) {
       dokku: {
         options: {
           remote: 'dokku@zach.xxx:hackedu.us',
+          commit: true,
           branch: 'master'
         }
       }
