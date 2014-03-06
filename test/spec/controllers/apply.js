@@ -20,6 +20,17 @@ describe('Controller: ApplyCtrl', function () {
     expect(scope.user).toEqual({});
   });
 
+  it('should attach an empty application object to the scope', function () {
+    expect(scope.application).toEqual({});
+  });
+
+  it('should attach a registrationForm object to the scope', function () {
+    expect(scope.application).toEqual({
+      user: scope.user,
+      application: scope.application
+    });
+  });
+
   it('should successfully post valid form', function () {});
   it('should unsuccessfully post invalid form', function () {});
 });
