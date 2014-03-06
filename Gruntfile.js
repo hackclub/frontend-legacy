@@ -390,7 +390,7 @@ module.exports = function (grunt) {
       },
       dokku: {
         options: {
-          remote: 'dokku@zach.xxx:hackedu-frontend',
+          remote: 'dokku@zach.xxx:hackedu.us',
           branch: 'master'
         }
       }
