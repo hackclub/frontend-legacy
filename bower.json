@@ -2,22 +2,19 @@
   "name": "hackedu",
   "version": "0.0.0",
   "dependencies": {
-    "angular": "1.2.6",
+    "angular": "1.2.14",
     "foundation": "5.0.2",
     "json3": "~3.2.6",
     "es5-shim": "~2.1.0",
-    "angular-resource": "1.2.6",
-    "angular-cookies": "1.2.6",
-    "angular-sanitize": "1.2.6",
-    "angular-route": "1.2.6",
-    "angular-google-maps": "~1.0.5",
+    "angular-resource": "1.2.14",
+    "angular-cookies": "1.2.14",
+    "angular-sanitize": "1.2.14",
+    "angular-route": "1.2.14",
+    "angular-google-maps": "~1.0.15",
     "Hover.css": "git://github.com/zachlatta/Hover"
   },
   "devDependencies": {
-    "angular-mocks": "1.2.6",
-    "angular-scenario": "1.2.6"
-  },
-  "resolutions": {
-    "angular": "1.2.6"
+    "angular-mocks": "1.2.14",
+    "angular-scenario": "1.2.14"
   }
 }
