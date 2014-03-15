@@ -8,23 +8,23 @@
       <legend>Account Information</legend>
       <div class="row">
         <div class="small-6 columns"
-          ng-class="{error: apply.first_name.$dirty && apply.first_name.$invalid}">
+          ng-class="{error: apply.firstName.$dirty && apply.firstName.$invalid}">
           <label>First Name <small>Required</small></label>
-          <input type="text" name="first_name" ng-model="user.first_name"
+          <input type="text" name="firstName" ng-model="user.firstName"
           -             required placeholder="Zaphod" />
-          <div ng-show="apply.first_name.$dirty && apply.first_name.$invalid">
-            <small class="error" ng-show="apply.first_name.$error.required">
+          <div ng-show="apply.firstName.$dirty && apply.firstName.$invalid">
+            <small class="error" ng-show="apply.firstName.$error.required">
               You must provide a first name.
             </small>
           </div>
         </div>
         <div class="small-6 columns"
-          ng-class="{error: apply.last_name.$dirty && apply.last_name.$invalid}">
+          ng-class="{error: apply.lastName.$dirty && apply.lastName.$invalid}">
           <label>Last Name <small>Required</small></label>
-          <input type="text" name="last_name" ng-model="user.last_name"
+          <input type="text" name="lastName" ng-model="user.lastName"
             required placeholder="Beeblebrox" />
-          <div ng-show="apply.last_name.$dirty && apply.last_name.$invalid">
-            <small class="error" ng-show="apply.last_name.$error.required">
+          <div ng-show="apply.lastName.$dirty && apply.lastName.$invalid">
+            <small class="error" ng-show="apply.lastName.$error.required">
               You must provide a last name.
             </small>
           </div>
@@ -86,13 +86,13 @@
           </div>
         </div>
         <div class="medium-6 columns"
-          ng-class="{error: apply.password_verify.$dirty && apply.password_verify.$invalid}">
+          ng-class="{error: apply.passwordVerify.$dirty && apply.passwordVerify.$invalid}">
           <label>Password Confirmation <small>Required</small></label>
-          <input type="password" name="password_verify"
-          ng-model="user.password_verify" match="user.password"
+          <input type="password" name="passwordVerify"
+          ng-model="user.passwordVerify" match="user.password"
           placeholder="Betelgeuse123" />
-          <div ng-show="apply.password_verify.$dirty && apply.password_verify.$invalid">
-            <small class="error" ng-show="apply.password_verify.$error.mismatch">
+          <div ng-show="apply.passwordVerify.$dirty && apply.passwordVerify.$invalid">
+            <small class="error" ng-show="apply.passwordVerify.$error.mismatch">
               Must match password.
             </small>
           </div>
@@ -105,12 +105,12 @@
 
       <div class="row">
         <div class="medium-12 columns"
-          ng-class="{error: apply.high_school.$dirty && apply.high_school.$invalid}">
+          ng-class="{error: apply.highSchool.$dirty && apply.highSchool.$invalid}">
           <label>High School <small>Required</small></label>
-          <input type="text" name="high_school"
-          ng-model="application.high_school" required />
-          <div ng-show="apply.high_school.$dirty && apply.high_school.$invalid">
-            <small class="error" ng-show="apply.high_school.$error.required">
+          <input type="text" name="highSchool"
+          ng-model="user.application.highSchool" required />
+          <div ng-show="apply.highSchool.$dirty && apply.highSchool.$invalid">
+            <small class="error" ng-show="apply.highSchool.$error.required">
               You must provide your high school.
             </small>
           </div>
@@ -118,15 +118,15 @@
       </div>
       <div class="row">
         <div class="medium-12 columns"
-          ng-class="{error: apply.interesting_project.$dirty && apply.interesting_project.$invalid}">
+          ng-class="{error: apply.interestingProject.$dirty && apply.interestingProject.$invalid}">
           <label>
             Please tell us about an interesting project, preferably outside
             of class, that you created or worked on. <small>Required</small>
           </label>
-          <textarea name="interesting_project"
-            ng-model="application.interesting_project" required></textarea>
-          <div ng-show="apply.interesting_project.$dirty && apply.interesting_project.$invalid">
-            <small class="error" ng-show="apply.interesting_project.$error.required">
+          <textarea name="interestingProject"
+            ng-model="user.application.interestingProject" required></textarea>
+          <div ng-show="apply.interestingProject.$dirty && apply.interestingProject.$invalid">
+            <small class="error" ng-show="apply.interestingProject.$error.required">
               You must provide an interesting project.
             </small>
           </div>
@@ -134,15 +134,15 @@
       </div>
       <div class="row">
         <div class="medium-12 columns"
-          ng-class="{error: apply.system_hacked.$dirty && apply.system_hacked.$invalid}">
+          ng-class="{error: apply.systemHacked.$dirty && apply.systemHacked.$invalid}">
           <label>
             Please tell us about the time you most successfully hacked some
             (non-computer) system to your advantage. <small>Required</small>
           </label>
-          <textarea name="system_hacked"
-            ng-model="application.system_hacked" required></textarea>
-          <div ng-show="apply.system_hacked.$dirty && apply.system_hacked.$invalid">
-            <small class="error" ng-show="apply.system_hacked.$error.required">
+          <textarea name="systemHacked"
+            ng-model="user.application.systemHacked" required></textarea>
+          <div ng-show="apply.systemHacked.$dirty && apply.systemHacked.$invalid">
+            <small class="error" ng-show="apply.systemHacked.$error.required">
               You must provide a system that you hacked.
             </small>
           </div>
@@ -155,7 +155,7 @@
             What are you passionate about? <small>Required</small>
           </label>
           <textarea name="passion"
-            ng-model="application.passion" required></textarea>
+            ng-model="user.application.passion" required></textarea>
           <div ng-show="apply.passion.$dirty && apply.passion.$invalid">
             <small class="error" ng-show="apply.passion.$error.required">
               You must discuss what you are passionate about.
@@ -169,7 +169,7 @@
           <label>
             What is your story? How did you get started with programming? <small>Required</small>
           </label>
-          <textarea name="story" ng-model="application.story"
+          <textarea name="story" ng-model="user.application.story"
             required></textarea>
           <div ng-show="apply.story.$dirty && apply.story.$invalid">
             <small class="error" ng-show="apply.story.$error.required">
@@ -184,7 +184,7 @@
           <label>
             Why do you want to start a Hack Club? <small>Required</small>
           </label>
-          <textarea name="why" ng-model="application.why"
+          <textarea name="why" ng-model="user.application.why"
             required></textarea>
           <div ng-show="apply.why.$dirty && apply.why.$invalid">
             <small class="error" ng-show="apply.why.$error.required">
