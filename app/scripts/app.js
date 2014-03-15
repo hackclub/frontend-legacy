@@ -1,9 +1,9 @@
 'use strict';
 
-var apiBase = 'https://hackedu-website.appspot.com/v1';
+var apiBase = 'http://api.hackedu.us/v1';
 
 // @if DEBUG
-apiBase = 'http://localhost:8080/v1';
+apiBase = 'http://localhost:3000/v1';
 // @endif
 
 angular.module('hackeduApp', [
