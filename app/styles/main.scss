@@ -71,3 +71,23 @@ $include-html-global-classes: false;
     border-color: #fff;
   }
 }
+
+.rackspace {
+  background-color: $hackedu-black;
+  color: $text-on-black;
+
+  p {
+    font-size: rem-calc(14);
+    margin: 15px 0 15px 0;
+
+    @media #{$medium-up} {
+      font-size: rem-calc(18);
+      margin: 30px 0 30px;
+    }
+
+    a {
+      color: scale-color($text-on-black, $lightness: 10%);
+      text-decoration: underline;
+    }
+  }
+}
