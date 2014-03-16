@@ -18,17 +18,13 @@ describe('Service: School', function () {
       $httpBackend.expectGET('http://localhost:3000/v1/schools').respond([
         {
           name: 'First School',
-          location: {
-            latitude: '1',
-            longitude: '1'
-          }
+          latitude: '1',
+          longitude: '1'
         },
         {
           name: 'Second School',
-          location: {
-            latitude: '2',
-            longitude: '2'
-          }
+          latitude: '2',
+          longitude: '2'
         }
       ]);
 
