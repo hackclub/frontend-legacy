@@ -28,6 +28,8 @@ angular.module('hackeduApp', [
         redirectTo: '/'
       });
 
+    $locationProvider.hashPrefix('!');
+
     if (window.history && window.history.pushState) {
       $locationProvider.html5Mode(true);
     }
