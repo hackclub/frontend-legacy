@@ -208,26 +208,17 @@ AddDefaultCharset utf-8
 # Also, some cloud hosting services require `RewriteBase` to be set:
 # http://www.rackspace.com/knowledge_center/frequently-asked-question/why-is-mod-rewrite-not-working-on-my-site
 
-<IfModule mod_rewrite.c>
-    Options +FollowSymlinks
-  # Options +SymLinksIfOwnerMatch
-    RewriteEngine On
-  # RewriteBase /
-</IfModule>
-
-# html5 pushstate (history) support:
 <ifModule mod_rewrite.c>
+    Options +FollowSymlinks
     RewriteEngine On
+
+    # html5 pushstate (history) support:
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_URI} !index
     RewriteRule (.*) index.html [L]
-</ifModule>
 
-# Serve prerendered pages to search engines
-<IfModule mod_rewrite.c>
-    RewriteEngine On
- 
+    # Serve prerendered pages to search engines
     <IfModule mod_proxy_http.c>
         RewriteCond %{HTTP_USER_AGENT} baiduspider|facebookexternalhit|twitterbot [NC,OR]
         RewriteCond %{QUERY_STRING} _escaped_fragment_
@@ -235,7 +226,7 @@ AddDefaultCharset utf-8
         # Only proxy the request to Prerender if it's a request for HTML
         RewriteRule ^(?!.*?(\.js|\.css|\.xml|\.less|\.png|\.jpg|\.jpeg|\.gif|\.pdf|\.doc|\.txt|\.ico|\.rss|\.zip|\.mp3|\.rar|\.exe|\.wmv|\.doc|\.avi|\.ppt|\.mpg|\.mpeg|\.tif|\.wav|\.mov|\.psd|\.ai|\.xls|\.mp4|\.m4a|\.swf|\.dat|\.dmg|\.iso|\.flv|\.m4v|\.torrent))(.*) http://prerender.zach.xxx/http://hackedu.us/$2 [P,L]
     </IfModule>
-</IfModule>
+</ifModule>
 
 # ------------------------------------------------------------------------------
 # | Suppressing / Forcing the "www." at the beginning of URLs                  |
