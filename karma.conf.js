@@ -22,6 +22,7 @@ module.exports = function(config) {
       'app/bower_components/angular-google-maps/dist/angular-google-maps.js',
       'test/helper/google_analytics.js',
       'app/bower_components/angularytics/dist/angularytics.min.js',
+      'app/bower_components/angular-foundation/mm-foundation-tpls.js',
       'app/scripts/*.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',

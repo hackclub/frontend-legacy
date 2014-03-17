@@ -2,6 +2,14 @@
   <h1>Apply</h1>
 </div>
 
+<div class="row">
+  <alert ng-repeat="alert in alerts"
+              type="alert.type"
+             close="closeAlert($index)">
+    {{alert.msg}}
+  </alert>
+</div>
+
 <form name="apply" ng-submit="createUser()" novalidate>
   <div class="row">
     <fieldset>

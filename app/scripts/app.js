@@ -12,7 +12,8 @@ angular.module('hackeduApp', [
   'ngSanitize',
   'ngRoute',
   'google-maps',
-  'angularytics'
+  'angularytics',
+  'mm.foundation'
 ])
   .config(function ($routeProvider, $locationProvider, AngularyticsProvider) {
     $routeProvider
