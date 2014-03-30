@@ -25,6 +25,10 @@ angular.module('hackeduApp', [
         templateUrl: 'views/apply.html',
         controller: 'ApplyCtrl'
       })
+      .when('/attributions', {
+        templateUrl: 'views/attributions.html',
+        controller: 'AttributionsCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
