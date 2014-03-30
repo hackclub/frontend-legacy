@@ -20,33 +20,51 @@ $include-html-global-classes: false;
   }
 }
 
-.introduction {
-  background-color: $hackedu-blue;
-
+.main-section {
   padding: 50px 0 50px 0;
+  text-align: center;
+  color: #fff;
 
   @media #{$medium-up} {
     padding: 150px 0 150px 0;
   }
 
   h1 {
-    color: #fff;
     font-weight: bold;
+    color: #fff;
+  }
+
+  p {
+    font-size: rem-calc(20);
+  }
+}
+
+.introduction {
+  background-color: $hackedu-blue;
+}
+
+.pillars {
+  background-color: $hackedu-purple;
+
+  img {
+    height: 125px;
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    margin-bottom: 75px;
+  }
+
+  .columns h1 {
+    font-size: rem-calc(28);
+    margin-bottom: 0;
   }
 }
 
 .call-to-action {
   background-color: $hackedu-green;
-  text-align: center;
-
-  padding: 50px 0 50px 0;
-
-  @media #{$medium-up} {
-    padding: 150px 0 150px 0;
-  }
 
   h1 {
-    color: #fff;
     font-size: rem-calc(48);
     font-weight: bold;
     margin-bottom: 15px;
