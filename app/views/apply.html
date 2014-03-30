@@ -42,7 +42,7 @@
         <div class="medium-12 columns"
           ng-class="{error: apply.email.$dirty && apply.email.$invalid}">
           <label>Email <small>Required</small></label>
-          <input type="email" name="email" ng-model="user.email"
+          <input type="email" name="email" ng-model="user.email" unique-email
           required placeholder="zaphod@beeblebrox.com" />
           <div ng-show="apply.email.$dirty && apply.email.$invalid">
             <small class="error" ng-show="apply.email.$error.required">
@@ -50,6 +50,9 @@
             </small>
             <small class="error" ng-show="apply.email.$error.email">
               You must provide a valid email.
+            </small>
+            <small class="error" ng-show="apply.email.$error.uniqueEmail">
+              Email is already taken.
             </small>
           </div>
         </div>
