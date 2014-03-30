@@ -6,18 +6,20 @@ describe('Controller: ApplyCtrl', function () {
   beforeEach(module('hackeduApp'));
 
   var ApplyCtrl,
+    User,
     scope;
 
   // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope) {
+  beforeEach(inject(function ($controller, $rootScope, _User_) {
     scope = $rootScope.$new();
     ApplyCtrl = $controller('ApplyCtrl', {
       $scope: scope
     });
+    User = _User_;
   }));
 
   it('should attach an empty user object to the scope', function () {
-    expect(scope.user).toEqual({});
+    expect(scope.user).toEqual(new User());
   });
 
   it('should attach an empty array of alerts to the scope', function () {

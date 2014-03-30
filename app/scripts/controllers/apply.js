@@ -1,10 +1,8 @@
 'use strict';
 
-var apiBase;
-
 angular.module('hackeduApp')
-  .controller('ApplyCtrl', function($scope, $http) {
-    $scope.user = {};
+  .controller('ApplyCtrl', function($scope, $http, User) {
+    $scope.user = new User();
     $scope.alerts = [];
 
     $scope.closeAlert = function (index) {
@@ -16,12 +14,8 @@ angular.module('hackeduApp')
     };
 
     $scope.createUser = function () {
-      $http({
-        method: 'POST',
-        url: apiBase + '/users',
-        data: $scope.user
-      })
-        .success(function () {
+      $scope.user.$save(
+        function () {
           $scope.alerts.push({
             type: 'success',
             msg: 'Application submitted successfully. Expect to hear from ' +
@@ -29,8 +23,8 @@ angular.module('hackeduApp')
           });
 
           $scope.scrollToTop();
-        })
-        .error(function () {
+        },
+        function () {
           $scope.alerts.push({
             type: 'warning',
             msg: 'Oops, we received your application, but there was an ' +
