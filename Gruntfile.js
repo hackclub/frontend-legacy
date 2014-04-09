@@ -306,6 +306,8 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             'Procfile',
+            'server.go',
+            '.godir',
             '*.html',
             'views/{,*/}*.html',
             'partials/{,*/}*.html',
