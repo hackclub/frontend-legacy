@@ -305,7 +305,7 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             '.htaccess',
-            'Dockerfile',
+            'Procfile',
             '*.html',
             'views/{,*/}*.html',
             'partials/{,*/}*.html',
