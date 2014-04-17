@@ -391,9 +391,9 @@ module.exports = function (grunt) {
       options: {
         push: true
       },
-      dokku: {
+      prod: {
         options: {
-          remote: 'ssh://git@deis.hackedu.us:2222/hackedu-frontend.git',
+          remote: 'ssh://zrl@pikachu.hackedu.us:/var/git/hackedu.us.git',
           commit: true,
           branch: 'master'
         }
@@ -452,7 +452,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('deploy', [
     'build',
-    'buildcontrol:dokku'
+    'buildcontrol:prod'
   ]);
 
   grunt.registerTask('default', [
