@@ -3,9 +3,8 @@
 var apiBase;
 
 angular.module('hackeduApp')
-  .service('School', ['$resource',
-    function ($resource) {
-      return $resource(apiBase + '/schools/:id', {}, {
-        query: { method: 'GET', params: { id: '' }, isArray: true }
-      });
-    }]);
+  .factory('School', function ($resource) {
+    return $resource(apiBase + '/schools/:id', {}, {
+      query: { method: 'GET', params: { id: '' }, isArray: true }
+    });
+  });
