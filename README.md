@@ -16,27 +16,19 @@ Prerequisites:
 
 Install npm dependencies:
 
-```
-$ npm install
-```
+    $ npm install
 
 Install Bower dependencies:
 
-```
-$ bower install
-```
+    $ bower install
 
 Install Selenium:
 
-```
-$ ./node_modules/protractor/bin/webdriver-manager update
-```
+    $ ./node_modules/protractor/bin/webdriver-manager update
 
 Run tests:
 
-```
-$ grunt test
-```
+    $ grunt test
 
 If they're green, you're all set up. If not, something has gone wrong.
 
@@ -44,21 +36,15 @@ If they're green, you're all set up. If not, something has gone wrong.
 
 Start development server:
 
-```
-$ grunt serve
-```
+    $ grunt serve
 
 Run test suite:
 
-```
-$ grunt test
-```
+    $ grunt test
 
 Build for distribution:
 
-```
-$ grunt
-```
+    $ grunt
 
 ## LICENSE
 
