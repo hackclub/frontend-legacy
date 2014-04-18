@@ -381,8 +381,11 @@ module.exports = function (grunt) {
 
     protractor: {
       options: {
+        configFile: 'protractor.conf.js',
         keepAlive: false,
-        configFile: 'protractor.conf.js'
+        args: {
+          seleniumServerJar: './node_modules/protractor/selenium/selenium-server-standalone-2.39.0.jar'
+        }
       },
       run: {}
     },
