@@ -14,6 +14,9 @@ describe('Controller: MainCtrl', function () {
 
   it('should attach a map to the scope', function () {
     expect(scope.map).toNotBe(null);
+    expect(scope.map.center.latitude).toNotBe(null);
+    expect(scope.map.center.longitude).toNotBe(null);
+    expect(scope.map.zoom).toNotBe(null);
   });
 
   it('should attach schools to the scope', function () {
