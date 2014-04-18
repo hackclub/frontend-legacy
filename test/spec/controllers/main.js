@@ -17,10 +17,7 @@ describe('Controller: MainCtrl', function () {
     expect(scope.map.center.latitude).toNotBe(null);
     expect(scope.map.center.longitude).toNotBe(null);
     expect(scope.map.zoom).toNotBe(null);
-  });
-
-  it('should attach schools to the scope', function () {
-    expect(scope.schools).toNotBe(null);
+    expect(scope.map.schools).toNotBe(null);
   });
 });
 

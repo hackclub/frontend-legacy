@@ -7,12 +7,12 @@ angular.module('hackeduApp')
         latitude: 36,
         longitude: -101
       },
-      zoom: 4
+      zoom: 4,
+      schools: School.query()
     };
     
-    $scope.schools = School.query();
 
-    angular.forEach($scope.schools, function (school) {
+    angular.forEach($scope.map.schools, function (school) {
       school.closeClick = function () {
         school.showWindow = false;
       };
