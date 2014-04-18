@@ -11,4 +11,13 @@ angular.module('hackeduApp')
     };
     
     $scope.schools = School.query();
+
+    angular.forEach($scope.schools, function (school) {
+      school.closeClick = function () {
+        school.showWindow = false;
+      };
+      school.onClicked = function () {
+        school.showWindow = true;
+      };
+    });
   });
