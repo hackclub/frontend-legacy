@@ -10,7 +10,7 @@
     "angular-cookies": "1.2.14",
     "angular-sanitize": "1.2.14",
     "angular-route": "1.2.14",
-    "angular-google-maps": "~1.0.15",
+    "angular-google-maps": "~1.0.18",
     "Hover.css": "git://github.com/zachlatta/Hover",
     "angularytics": "~0.2.3",
     "angular-foundation": "~0.1.0"
