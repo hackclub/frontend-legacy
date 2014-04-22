@@ -4,7 +4,7 @@ angular.module('hackeduApp')
   .controller('MainCtrl', function ($scope, School) {
     $scope.map = {
       center: {
-        latitude: 36,
+        latitude: 39,
         longitude: -101
       },
       zoom: 4,
