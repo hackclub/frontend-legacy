@@ -12,8 +12,8 @@ $topbar-title-weight: bold;
 $topbar-title-font-size: rem-calc(30);
 
 $topbar-link-font-size: rem-calc(16);
-$topbar-link-bg-hover: scale-color($hackedu-red, $lightness: -7%);
-$topbar-link-bg-active: $hackedu-red;
-$topbar-link-bg-active-hover: $topbar-link-bg-hover;
+$topbar-link-bg-hover: scale-color($hackedu-red, $lightness: -3%);
+$topbar-link-bg-active: scale-color($hackedu-red, $lightness: -4%);
+$topbar-link-bg-active-hover: scale-color($hackedu-red, $lightness: -7%);
 
 @import "foundation";
