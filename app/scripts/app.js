@@ -1,6 +1,6 @@
 'use strict';
 
-var apiBase = 'https://api.hackedu.us/v1';
+var apiBase = 'https://api.hackedu.us';
 
 // @if DEBUG
 apiBase = 'http://localhost:3000/v1';
