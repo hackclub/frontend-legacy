@@ -3,7 +3,7 @@
 var apiBase = 'https://api.hackedu.us';
 
 // @if DEBUG
-apiBase = 'http://localhost:3000/v1';
+apiBase = 'http://localhost:3000';
 // @endif
 
 angular.module('hackeduApp', [
