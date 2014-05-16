@@ -15,7 +15,7 @@ describe('Service: School', function () {
 
   describe('query', function () {
     it('should get all the Schools', function () {
-      $httpBackend.expectGET('http://localhost:3000/v1/schools').respond([
+      $httpBackend.expectGET('http://localhost:3000/schools').respond([
         {
           name: 'First School',
           latitude: '1',
