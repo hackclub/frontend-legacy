@@ -25,6 +25,9 @@ angular.module('hackeduApp', [
         templateUrl: 'views/apply.html',
         controller: 'ApplyCtrl'
       })
+      .when('/login', {
+        templateUrl: 'views/login.html'
+      })
       .when('/contact', {
         templateUrl: 'views/contact.html'
       })
