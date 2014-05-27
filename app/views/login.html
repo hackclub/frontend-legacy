@@ -1,1 +1,41 @@
-<p>This is the login view.</p>
+<div class="row">
+  <h1>Login</h1>
+
+  <p>{{ message }}</p>
+
+  <form name="login" ng-submit="submit()">
+      <div class="row">
+        <div class="medium-12 columns"
+          ng-class="{error: login.email.$dirty && login.email.$invalid}">
+          <label>Email</small></label>
+          <input type="email" name="email" ng-model="user.email" required
+            placeholder="zaphod@beeblebrox.com" />
+          <div ng-show="login.email.$dirty && login.email.$invalid">
+            <small class="error" ng-show="login.email.$error.required">
+              You must provide an email.
+            </small>
+            <small class="error" ng-show="login.email.$error.email">
+              You must provide a valid email.
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="medium-12 columns"
+          ng-class="{error: login.password.$dirty && login.password.$invalid}">
+          <label>Password <small>Required</small></label>
+          <input type="password" name="password" ng-model="user.password"
+            ng-minlength="6" required placeholder="Betelgeuse123" />
+          <div ng-show="login.password.$dirty && login.password.$invalid">
+            <small class="error" ng-show="login.password.$error.required">
+              You must provide a password.
+            </small>
+            <small class="error" ng-show="login.password.$error.minlength">
+              Passwords must be at least 6 characters in length.
+            </small>
+          </div>
+        </div>
+      </div>
+    <button type="submit" ng-disabled="login.$invalid">Login</button>
+  </form>
+</div>

@@ -15,7 +15,8 @@ angular.module('hackeduApp', [
   'angularytics',
   'mm.foundation'
 ])
-  .config(function ($routeProvider, $locationProvider, AngularyticsProvider) {
+  .config(function ($routeProvider, $locationProvider, $httpProvider,
+                    AngularyticsProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -46,6 +47,7 @@ angular.module('hackeduApp', [
       $locationProvider.html5Mode(true);
     }
 
+    $httpProvider.interceptors.push('authInterceptor');
     AngularyticsProvider.setEventHandlers(['GoogleUniversal']);
   })
   .run(function (Angularytics) {
