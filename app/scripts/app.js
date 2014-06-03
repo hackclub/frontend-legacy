@@ -6,6 +6,15 @@ var apiBase = 'https://api.hackedu.us';
 apiBase = 'http://localhost:3000';
 // @endif
 
+// TODO: Find a better way to do this, but this prevents Grunt from complaining
+var userRoles;
+userRoles = {
+  public: undefined,
+  admin: 1,
+  organizer: 2,
+  student: 3
+};
+
 angular.module('hackeduApp', [
   'ngCookies',
   'ngResource',
