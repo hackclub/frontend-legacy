@@ -1,7 +1,5 @@
 'use strict';
 
-var apiBase;
-
 angular.module('hackeduApp')
   .controller('LoginCtrl', function ($scope, Auth) {
     $scope.message = '';
