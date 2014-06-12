@@ -19,9 +19,9 @@ angular.module('hackeduApp', [
   'mm.foundation'
 ])
   // @if DEBUG
-  .constant('apiBase', 'http://localhost:3000')
+  .constant('API_BASE', 'http://localhost:3000')
   // @else
-  .constant('apiBase', 'https://api.hackedu.us')
+  .constant('API_BASE', 'https://api.hackedu.us')
   // @endif
   .config(function ($routeProvider, $locationProvider, $httpProvider,
                     AngularyticsProvider) {
