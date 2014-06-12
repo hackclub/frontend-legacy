@@ -10,7 +10,25 @@ angular.module('hackeduApp')
       zoom: 4,
       schools: School.query()
     };
-    
+
+    $scope.sponsors = [
+      {
+        name: 'CodeHS',
+        logo: '/images/community.svg'
+      },
+      {
+        name: 'Nitrous.io',
+        logo: '/images/community.svg'
+      },
+      {
+        name: 'Rackspace',
+        logo: '/images/community.svg'
+      },
+      {
+        name: 'SendGrid',
+        logo: '/images/community.svg'
+      }
+    ];
 
     angular.forEach($scope.map.schools, function (school) {
       school.closeClick = function () {

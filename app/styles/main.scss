@@ -90,6 +90,26 @@ $include-html-global-classes: false;
   }
 }
 
+.sponsors {
+  background-color: $hackedu-orange;
+
+  .logos {
+    margin-top: 100px;
+  }
+
+  p {
+    font-size: rem-calc(28);
+  }
+
+  img {
+    height: 50px;
+
+    @media #{$medium-up} {
+      height: 100px;
+    }
+  }
+}
+
 .rackspace {
   background-color: $hackedu-black;
   color: $text-on-black;
