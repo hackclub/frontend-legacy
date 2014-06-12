@@ -1,12 +1,12 @@
 'use strict';
 
 angular.module('hackeduApp').
-  factory('authInterceptor', function ($rootScope, $q, $window) {
+  factory('authInterceptor', function ($rootScope, $q, $cookieStore) {
     return {
       request: function (config) {
         config.headers = config.headers || {};
-        if ($window.sessionStorage.token) {
-          config.headers.Authorization = 'Bearer ' + $window.sessionStorage.token;
+        if ($cookieStore.token) {
+          config.headers.Authorization = 'Bearer ' + $cookieStore.token;
         }
         return config;
       },
