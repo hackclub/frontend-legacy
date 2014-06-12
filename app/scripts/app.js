@@ -1,11 +1,5 @@
 'use strict';
 
-var apiBase = 'https://api.hackedu.us';
-
-// @if DEBUG
-apiBase = 'http://localhost:3000';
-// @endif
-
 // TODO: Find a better way to do this, but this prevents Grunt from complaining
 var userRoles;
 userRoles = {
@@ -24,6 +18,11 @@ angular.module('hackeduApp', [
   'angularytics',
   'mm.foundation'
 ])
+  // @if DEBUG
+  .constant('apiBase', 'http://localhost:3000')
+  // @else
+  .constant('apiBase', 'https://api.hackedu.us')
+  // @endif
   .config(function ($routeProvider, $locationProvider, $httpProvider,
                     AngularyticsProvider) {
     $routeProvider

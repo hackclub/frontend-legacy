@@ -1,9 +1,9 @@
 'use strict';
 
-var apiBase, userRoles;
+var userRoles;
 
 angular.module('hackeduApp')
-  .factory('Auth', function ($http, $cookieStore) {
+  .factory('Auth', function ($http, $cookieStore, apiBase) {
     var token = $cookieStore.get('token');
 
     return {

@@ -6,16 +6,17 @@ describe('Service: School', function () {
   beforeEach(angular.mock.module('hackeduApp'));
 
   // instantiate service
-  var School, $httpBackend;
+  var School, $httpBackend, apiBase;
 
-  beforeEach(inject(function (_School_, _$httpBackend_) {
+  beforeEach(inject(function (_School_, _$httpBackend_, _apiBase_) {
     School = _School_;
     $httpBackend = _$httpBackend_;
+    apiBase = _apiBase_;
   }));
 
   describe('query', function () {
     it('should get all the Schools', function () {
-      $httpBackend.expectGET('http://localhost:3000/schools').respond([
+      $httpBackend.expectGET(apiBase + '/schools').respond([
         {
           name: 'First School',
           latitude: '1',

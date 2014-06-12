@@ -1,8 +1,6 @@
 'use strict';
 
-var apiBase;
-
 angular.module('hackeduApp')
-  .factory('User', function ($resource) {
+  .factory('User', function ($resource, apiBase) {
     return $resource(apiBase + '/users/:id', {id: '@id'});
   });
