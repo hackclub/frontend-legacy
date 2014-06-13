@@ -3,10 +3,6 @@
 Welcome to hackEDU's website frontend. I'm served as a static site and
 communicate with our [backend](https://github.com/hackedu/backend).
 
-Links:
-
-* [Trello Board](https://trello.com/b/eHmdv28l/development)
-
 ## Getting Started
 
 Prerequisites:
