@@ -34,7 +34,7 @@ window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
     </script>
     <!--End of Zopim Live Chat Script-->
   </head>
-  <body ng-app="hackeduApp">
+  <body ng-app="hackeduApp" ng-controller="ApplicationCtrl">
     <!--[if lt IE 7]>
       <p class="browsehappy">
         You are using an <strong>outdated</strong> browser. Please
@@ -121,6 +121,8 @@ window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
     <script src="scripts/controllers/login.js"></script>
     <script src="scripts/services/authinterceptor.js"></script>
     <script src="scripts/services/auth.js"></script>
+    <script src="scripts/services/session.js"></script>
+    <script src="scripts/controllers/application.js"></script>
     <!-- endbuild -->
     
     <script>$(document).foundation();</script>

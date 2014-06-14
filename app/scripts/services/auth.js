@@ -1,30 +1,26 @@
 'use strict';
 
-var userRoles;
-
 angular.module('hackeduApp')
-  .factory('Auth', function ($http, $cookieStore, API_BASE) {
-    var token = $cookieStore.get('token');
-
+  .factory('Auth', function ($http, $cookieStore, Session, API_BASE) {
     return {
-      login: function (user, success, error) {
-        $http.post(API_BASE + '/users/authenticate', user).
-          success(function (data) {
-            token = data.token;
-            $cookieStore.put('token', data.token);
-            success(data);
-          }).error(error);
+      login: function (credentials) {
+        return $http
+          .post(API_BASE + '/users/authenticate', credentials)
+          .then(function (res) {
+            Session.create(res.data.token, res.data.id, res.data.type);
+          });
       },
 
-      logout: function () {
-        token = null;
-        $cookieStore.remove('token');
+      isAuthenticated: function () {
+        return !!Session.token;
       },
 
-      userRoles: userRoles,
-      token: token,
-      loggedIn: function () {
-        return token !== null && token !== undefined;
-      }
+      isAuthorized: function (authorizedRoles) {
+        if (!angular.isArray(authorizedRoles)) {
+          authorizedRoles = [authorizedRoles];
+        }
+        return (this.isAuthenticated() &&
+                authorizedRoles.indexOf(Session.userRole) !== -1);
+      },
     };
   });

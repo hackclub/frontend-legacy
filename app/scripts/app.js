@@ -23,6 +23,20 @@ angular.module('hackeduApp', [
   // @else
   .constant('API_BASE', 'https://api.hackedu.us')
   // @endif
+  .constant('AUTH_EVENTS', {
+    loginSuccess: 'auth-login-success',
+    loginFailed: 'auth-login-failed',
+    logoutSuccess: 'auth-logout-success',
+    sessionTimeout: 'auth-session-timeout',
+    notAuthenticated: 'auth-not-authenticated',
+    notAuthorized: 'auth-not-authorized'
+  })
+  .constant('USER_ROLES', {
+    admin: 'admin',
+    organizer: 'organizer',
+    student: 'student',
+    guest: 'guest'
+  })
   .config(function ($routeProvider, $locationProvider, $httpProvider,
                     AngularyticsProvider) {
     $routeProvider
@@ -55,9 +69,28 @@ angular.module('hackeduApp', [
       $locationProvider.html5Mode(true);
     }
 
-    $httpProvider.interceptors.push('authInterceptor');
+    $httpProvider.interceptors.push([
+      '$injector',
+      function ($injector) {
+        return $injector.get('authInterceptor');
+      }
+    ]);
     AngularyticsProvider.setEventHandlers(['GoogleUniversal']);
   })
-  .run(function (Angularytics) {
+  .run(function (Angularytics, $rootScope, AUTH_EVENTS, Auth) {
     Angularytics.init();
+
+    $rootScope.$on('$stateChangeStart', function (event, next) {
+      var authorizedRoles = next.data.authorizedRoles;
+
+      if (!Auth.isAuthorized(authorizedRoles)) {
+        event.preventDefault();
+
+        if (Auth.isAuthenticated()) {
+          $rootScope.$broadcast(AUTH_EVENTS.notAuthorized);
+        } else {
+          $rootScope.$broadcast(AUTH_EVENTS.notAuthenticated);
+        }
+      }
+    });
   });
