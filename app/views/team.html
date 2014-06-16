@@ -1,0 +1,25 @@
+<!-- Temporary data before fetch from DB -->
+<div ng-init="team = [
+  {name:'Zach Latta', title:'Program Designer, Head Developer, and Director of Bacon', shortdescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt vel velit non vulputate. Aliquam.', iconurl: 'http://4.bp.blogspot.com/-zsbDeAUd8aY/US7F0ta5d9I/AAAAAAAAEKY/UL2AAhHj6J8/s1600/facebook-default-no-profile-pic.jpg'},
+  
+  {name:'Ankit Ranjan', title:'Developer', shortdescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt vel velit non vulputate. Aliquam.', iconurl: 'http://4.bp.blogspot.com/-zsbDeAUd8aY/US7F0ta5d9I/AAAAAAAAEKY/UL2AAhHj6J8/s1600/facebook-default-no-profile-pic.jpg'},
+  
+  {name:'Julian Poyourow', title:'Developer', shortdescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt vel velit non vulputate. Aliquam.', iconurl: 'http://4.bp.blogspot.com/-zsbDeAUd8aY/US7F0ta5d9I/AAAAAAAAEKY/UL2AAhHj6J8/s1600/facebook-default-no-profile-pic.jpg'}
+  ]">
+</div>
+
+<!-- Page content and loop for each profile -->
+
+<div class="row">
+  <h1>Our Team</h1>
+  <div data-ng-repeat="member in team">
+    
+    <div class="small-12 medium-4 columns team-profile">
+      <img class="team-profile-img" src="{{member.iconurl}}" />
+      <h3>{{member.name}}</h3>
+      <p>{{member.title}}</p>
+      <p>{{member.shortdescription}}</p>
+    </div>
+
+  </div>
+</div>
