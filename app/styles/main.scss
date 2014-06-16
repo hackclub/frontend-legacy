@@ -61,6 +61,19 @@ $include-html-global-classes: false;
   }
 }
 
+.team-profile {
+
+  margin-top: 20px;
+
+}
+
+.team-profile-img {
+
+  max-height: 300px;
+  border-radius: 8px;
+
+}
+
 .call-to-action {
   background-color: $hackedu-green;
 
