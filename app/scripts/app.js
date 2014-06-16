@@ -53,7 +53,8 @@ angular.module('hackeduApp', [
         controller: 'LoginCtrl'
       })
       .when('/team', {
-        templateUrl: 'views/team.html'
+        templateUrl: 'views/team.html',
+        controller: 'TeamCtrl'
       })
       .when('/contact', {
         templateUrl: 'views/contact.html'
