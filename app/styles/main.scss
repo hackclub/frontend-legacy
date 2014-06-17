@@ -134,6 +134,18 @@ body, html {
   }
 }
 
+.login-form-push {
+  padding-top: 0px;
+
+  @media #{$medium-up} {
+    padding-top: 50px;
+  }
+
+  @media #{$large-up} {
+    padding-top: 125px;
+  }
+}
+
 .login-map .angular-google-map .angular-google-map-container {
   height: 100%;
   width: 100%;
