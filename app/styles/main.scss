@@ -138,3 +138,7 @@ $include-html-global-classes: false;
   max-height: 300px;
   border-radius: 8px;
 }
+
+.animate-4s {
+  transition: .4s ease;
+}
