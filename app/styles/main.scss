@@ -4,10 +4,6 @@
 $include-html-global-classes: false;
 @import "foundation/components/global";
 
-body, html {
-  height: 100%;
-}
-
 .title {
   font-family: "Amaranth", "Open Sans", "Helvetica Neue",  sans-serif;
 }
@@ -141,17 +137,4 @@ body, html {
 .team-profile-img {
   max-height: 300px;
   border-radius: 8px;
-}
-
-.overflow-auto {
-  overflow: auto;
-}
-
-.fullheight {
-  min-height: 100%;
-}
-
-.fullheight-absolute {
-  position: absolute;
-  min-height: 100%;
 }
