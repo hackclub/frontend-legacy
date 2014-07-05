@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('hackeduApp')
-  .factory('Auth', function ($http, $cookieStore, Session, API_BASE) {
+  .factory('Auth', function ($http, $cookieStore, Session, API_BASE,
+                             USER_ROLES) {
     return {
       login: function (credentials) {
         return $http
@@ -19,8 +20,13 @@ angular.module('hackeduApp')
         if (!angular.isArray(authorizedRoles)) {
           authorizedRoles = [authorizedRoles];
         }
+        // If it's public, then they're good.
+        if (authorizedRoles.indexOf(USER_ROLES.guest) !== -1) {
+          return true;
+        }
+
         return (this.isAuthenticated() &&
-                authorizedRoles.indexOf(Session.userRole) !== -1);
+                authorizedRoles.indexOf(Session.userType) !== -1);
       },
     };
   });

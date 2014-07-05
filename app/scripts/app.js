@@ -1,19 +1,10 @@
 'use strict';
 
-// TODO: Find a better way to do this, but this prevents Grunt from complaining
-var userRoles;
-userRoles = {
-  public: undefined,
-  admin: 1,
-  organizer: 2,
-  student: 3
-};
-
 angular.module('hackeduApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute',
+  'ui.router',
   'google-maps',
   'angularytics',
   'mm.foundation'
@@ -37,34 +28,55 @@ angular.module('hackeduApp', [
     student: 'student',
     guest: 'guest'
   })
-  .config(function ($routeProvider, $locationProvider, $httpProvider,
-                    AngularyticsProvider) {
-    $routeProvider
-      .when('/', {
+  .config(function ($stateProvider, $urlRouterProvider, $locationProvider,
+                    $httpProvider, USER_ROLES, AngularyticsProvider) {
+    $stateProvider
+      .state('home', {
+        url: '/',
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'MainCtrl',
+        data: {
+          authorizedRoles: USER_ROLES.guest
+        }
       })
-      .when('/apply', {
+      .state('apply', {
+        url: '/apply',
         templateUrl: 'views/apply.html',
-        controller: 'ApplyCtrl'
+        controller: 'ApplyCtrl',
+        data: {
+          authorizedRoles: USER_ROLES.guest
+        }
       })
-      .when('/login', {
+      .state('login', {
+        url: '/login',
         templateUrl: 'views/login.html',
-        controller: 'LoginCtrl'
+        controller: 'LoginCtrl',
+        data: {
+          authorizedRoles: USER_ROLES.guest
+        }
       })
-      .when('/team', {
+      .state('team', {
+        url: '/team',
         templateUrl: 'views/team.html',
-        controller: 'TeamCtrl'
+        controller: 'TeamCtrl',
+        data: {
+          authorizedRoles: USER_ROLES.guest
+        }
       })
-      .when('/contact', {
-        templateUrl: 'views/contact.html'
+      .state('contact', {
+        url: '/contact',
+        templateUrl: 'views/contact.html',
+        data: {
+          authorizedRoles: USER_ROLES.guest
+        }
       })
-      .when('/attributions', {
+      .state('attributions', {
+        url: '/attributions',
         templateUrl: 'views/attributions.html',
-        controller: 'AttributionsCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
+        controller: 'AttributionsCtrl',
+        data: {
+          authorizedRoles: USER_ROLES.guest
+        }
       });
 
     $locationProvider.hashPrefix('!');
