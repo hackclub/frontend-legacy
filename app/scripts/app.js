@@ -50,11 +50,11 @@ angular.module('hackeduApp', [
             case USER_ROLES.guest:
               return getTemplate('views/main.html');
             case USER_ROLES.organizer:
-              return getTemplate('views/organizer.html');
+              return getTemplate('views/organizer/home.html');
             case USER_ROLES.student:
-              return getTemplate('views/student.html');
+              return getTemplate('views/student/home.html');
             case USER_ROLES.admin:
-              return getTemplate('views/team.html');
+              return getTemplate('views/admin/home.html');
             // using views/team.html to demonstrate
             default:
               return getTemplate('views/main.html');

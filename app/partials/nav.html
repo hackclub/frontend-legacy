@@ -3,7 +3,7 @@
   <li ng-class="{ active: isActive('/apply') }">
     <a href="/apply">Apply</a>
   </li>
-  <li ng-class="{ active: isActive('/login') }">
+  <li ng-class="{ active: isActive('/login') }" ng-if="!isAuthenticated()">
     <a href="/login">Login</a>
   </li>
   <li ng-class="{ active: isActive('/team') }">
