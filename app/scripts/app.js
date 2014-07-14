@@ -33,26 +33,31 @@ angular.module('hackeduApp', [
     $stateProvider
       .state('home', {
         url: '/',
-        templateProvider: function($http, $templateCache, Session, USER_ROLES){
+        templateProvider: function ($http, $templateCache, Session,
+                                    USER_ROLES) {
           // consider individual roots and subsequent trees for more
           // complex routes than just the immediate page if necessary
           // increases routing complexity - allows for separate
           // controllers per view
           var getTemplate = function (template) {
             return $http.get(template, {cache:$templateCache})
-              .then(function(res){
+              .then(function (res) {
                 return res.data;
               });
-          }
+          };
 
-          var template;
-          switch(Session.userType){
-            case USER_ROLES.guest: return getTemplate('views/main.html');
-            case USER_ROLES.organizer: return getTemplate('views/organizer.html');
-            case USER_ROLES.student: return getTemplate('views/student.html');
-            case USER_ROLES.admin: return getTemplate('views/team.html');
+          switch (Session.userType){
+            case USER_ROLES.guest:
+              return getTemplate('views/main.html');
+            case USER_ROLES.organizer:
+              return getTemplate('views/organizer.html');
+            case USER_ROLES.student:
+              return getTemplate('views/student.html');
+            case USER_ROLES.admin:
+              return getTemplate('views/team.html');
             // using views/team.html to demonstrate
-            default: return getTemplate('views/main.html');
+            default:
+              return getTemplate('views/main.html');
           }
         },
         controller: 'MainCtrl',
