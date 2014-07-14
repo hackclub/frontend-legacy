@@ -4,6 +4,10 @@
 $include-html-global-classes: false;
 @import "foundation/components/global";
 
+body, html {
+  height: 100%;
+}
+
 .title {
   font-family: "Amaranth", "Open Sans", "Helvetica Neue",  sans-serif;
 }
@@ -130,6 +134,34 @@ $include-html-global-classes: false;
   }
 }
 
+.login {
+
+  @media #{$medium-up} {
+    padding-top: 50px;
+  }
+
+  @media #{$large-up} {
+    padding-top: 125px;
+  }
+}
+
+.login-map {
+  height: 100%;
+}
+
+.login-map .angular-google-map {
+  height: 100%;
+}
+
+.login-map .angular-google-map .angular-google-map-container {
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 .team-profile {
   margin-top: 20px;
 }
@@ -137,4 +169,17 @@ $include-html-global-classes: false;
 .team-profile-img {
   max-height: 300px;
   border-radius: 8px;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.fullheight {
+  min-height: 100%;
+}
+
+.fullheight-absolute {
+  position: absolute;
+  min-height: 100%;
 }
