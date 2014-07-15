@@ -1,8 +1,7 @@
 'use strict';
 
 angular.module('hackeduApp')
-  .factory('Auth', function ($http, $cookieStore, Session, API_BASE,
-                             USER_ROLES) {
+  .factory('Auth', function ($http, Session, API_BASE, USER_ROLES) {
     return {
       login: function (credentials) {
         return $http
@@ -13,6 +12,7 @@ angular.module('hackeduApp')
       },
 
       isAuthenticated: function () {
+        console.log(!!Session.token);
         return !!Session.token;
       },
 

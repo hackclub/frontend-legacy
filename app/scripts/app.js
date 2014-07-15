@@ -7,7 +7,8 @@ angular.module('hackeduApp', [
   'ui.router',
   'google-maps',
   'angularytics',
-  'mm.foundation'
+  'mm.foundation',
+  'ngStorage'
 ])
   // @if DEBUG
   .constant('API_BASE', 'http://localhost:3000')

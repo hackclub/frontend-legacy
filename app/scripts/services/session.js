@@ -1,16 +1,20 @@
 'use strict';
 
 angular.module('hackeduApp')
-  .factory('Session', function Session() {
-    this.create = function (token, userId, userType) {
-      this.token = token;
-      this.user = userId;
-      this.userType = userType;
+  .factory('Session', function Session($sessionStorage) {
+    return {
+      create: function (token, userId, userType) {
+        $sessionStorage.token = token;
+        $sessionStorage.userId = userId;
+        $sessionStorage.userType = userType;
+      },
+
+      destroy: function () {
+        $sessionStorage.$reset();
+      },
+
+      token: $sessionStorage.token,
+      user: $sessionStorage.userId,
+      userType: $sessionStorage.userType
     };
-    this.destroy = function () {
-      this.token = null;
-      this.userId = null;
-      this.userType = null;
-    };
-    return this;
   });
