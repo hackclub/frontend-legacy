@@ -7,7 +7,8 @@ communicate with our [backend](https://github.com/hackedu/backend).
 
 Prerequisites:
 
-* Ruby with Compass
+* Ruby
+* Compass
 * Grunt
 * npm
 * Bower
